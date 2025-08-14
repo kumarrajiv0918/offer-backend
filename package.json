@@ -1,0 +1,32 @@
+{
+  "name": "nodejsexpressmysql",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "build": "echo \"Building the project...\" && exit 0",
+    "lint": "echo \"Linting the project...\" && exit 0",
+    "format": "echo \"Formatting the project...\" && exit 0",
+    "deploy": "echo \"Deploying the project...\" && exit 0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "joi": "^17.13.3",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^2.0.2",
+    "mysql2": "^3.14.1",
+    "nodemailer": "^7.0.5",
+    "nodemon": "^3.1.10",
+    "typeorm": "^0.3.24",
+    "xlsx": "^0.18.5"
+  }
+}

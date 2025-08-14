@@ -1,0 +1,20 @@
+const express = require('express');
+const bodyParser = require('body-parser');
+const routes = require('./routes');
+const cors = require('cors');
+const db = require('./config/database/db');
+const app = express();
+const port = process.env.PORT || 3000;
+app.use(cors({
+    origin: ['http://localhost:3000', 'https://your-production-domain.com'],
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+}));
+db.getConnection()
+app.use(express.json());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use('/api', routes);
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
+});
